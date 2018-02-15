@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="data" type="com.think360.sotaknights.model.TaskItem"/>
+    </data>
+<com.rafakob.drawme.DrawMeRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:dm_stroke="1dp"
+    app:dm_radius="2dp"
+    app:dm_strokeColor="#E1E1E1">
+    <com.think360.sotaknights.customviews.CircularTextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@{data.short_name}"
+        android:solidColor="@{data.solidColor}"
+        android:textColor="@{data.textColor}"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tvShortName" />
+    <TextView
+        android:id="@+id/tvFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{data.task_client_name}"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:textColor="#293787"
+        android:textSize="14sp"
+        android:typeface="normal"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_toRightOf="@+id/tvShortName"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:id="@+id/tvContactNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{data.client_phone_number}"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:typeface="normal"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:drawableLeft="@drawable/phone"
+        android:layout_below="@+id/tvFullName"
+        android:layout_toRightOf="@+id/tvShortName"
+        android:layout_centerHorizontal="true"
+       />
+
+    <TextView
+        android:id="@+id/tvHoursTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="12sp"
+        android:text="@{data.message_recived_at}" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E1E1E1"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:layout_below="@+id/tvContactNo"
+        android:id="@+id/view" />
+
+    <TextView
+        android:id="@+id/tvLTaskNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        android:text="Task Number :-" />
+
+    <TextView
+        android:id="@+id/tvTaskNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:layout_toEndOf="@+id/tvLTaskNo"
+        android:layout_toRightOf="@+id/tvLTaskNo"
+        android:text='@{" "+data.task_number}' />
+    <TextView
+        android:id="@+id/tvLDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvTaskNo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        android:text="Date :-" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTaskNo"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:layout_toEndOf="@+id/tvLDate"
+        android:layout_toRightOf="@+id/tvLDate"
+        android:text='@{" "+data.date}' />
+    <TextView
+        android:id="@+id/tvLTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvLDate"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textColor="#000000"
+        android:text="Time :-" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLDate"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:layout_toEndOf="@+id/tvLTime"
+        android:layout_toRightOf="@+id/tvLTime"
+        android:text='@{" "+data.time}' />
+    <TextView
+        android:id="@+id/tvLLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvLTime"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp"
+        android:text="Location :-" />
+
+    <TextView
+        android:id="@+id/tvLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLTime"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:layout_toEndOf="@+id/tvLLoc"
+        android:layout_toRightOf="@+id/tvLLoc"
+        android:text='@{" "+data.location}' />
+</com.rafakob.drawme.DrawMeRelativeLayout>
+
+</layout>

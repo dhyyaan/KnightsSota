@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Knight\'s Sota</string>
+    <string name="txt_map">Map</string>
+    <string name="txt_cmp">Company</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_task">Task</string>
+    <string name="txt_settings">Settings</string>
+    <string-array name="image_ids">
+        <item>@drawable/aadher_card</item>
+        <item>@drawable/aadher_card</item>
+        <item>@drawable/aadher_card</item>
+        <item>@drawable/aadher_card</item>
+
+    </string-array>
+    <string name="title_termscon">TERMS &amp; CONDITIONS OF SERVICE</string>
+    <string name="termscond">1. That, I am provisionally applying as Knight’s SOTA (Security Of Trained Associate) in Knight
+                                 Detective &amp; Security Services Pvt. Ltd.\n\n
+
+        2. That, I will deposit relevant documents within 30 days of registration with the company as
+advised.\n\n
+
+3. That, I will login-logout during duty hours on Task Assigned in Knight’s SOTA App.\n\n
+
+4. That, I can be posted to any place in India/Abroad any time for Security tasks.\n\n
+
+5. That, my one month remunerations may be kept as refundable Security by the Company.\n\n
+
+6. That, I will pay for cost of Uniform/Security kit &amp; cost of training.\n\n
+
+7. That, I will be giving one month notice in advance to the Company in writing/mail before I
+leave the duty.\n\n
+
+8. That, I will follow LAW OF THE LAND, rules &amp; regulations, code of conduct of the company &amp;
+accept award as per the lawful disciplinary proceedings if any.\n\n
+
+9. That, I will obtain clearance Certificate/NOC from the company before leaving.\n\n
+
+10. That, for any dispute with the company, I undertake to get it arbitrated/resolved through the
+Board of Directors of the Company first. The jurisdiction shall be in Courts of Chandigarh India.\n\n
+
+11. That, I have read, understood and accepted the above terms &amp; conditions of Security Services.</string>
+</resources>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Data"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:typeface="normal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal|center_vertical" />
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nscrolview"
+        android:visibility="gone"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rlProfile"
+        android:background="#293787"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <com.think360.sotaknights.customviews.CircleImageview
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="2dp"
+            app:civ_fill_color="@color/alter_primary"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/sotaProfilePic"
+            android:visibility="gone"/>
+        <com.rafakob.drawme.DrawMeTextView
+            android:visibility="visible"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="gs"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:textColor="#293787"
+            app:dm_backColor="#FEEE35"
+            app:dm_shapeRadiusHalfHeight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/cIvProfilePic" />
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GurpreetSingh1960"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:typeface="normal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="18dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/rlProfile"
+            android:id="@+id/rlName"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="14dp"
+
+                app:srcCompat="@drawable/profile_hover"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp" />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/ivProfile"
+                android:layout_toRightOf="@+id/ivProfile"
+                android:text="Gurupreet Singh"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E1E1E1"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/ivProfile" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/rlName"
+            android:id="@+id/rlEmail"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivEmail"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="14dp"
+                app:srcCompat="@drawable/email"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp" />
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/ivEmail"
+                android:layout_toRightOf="@+id/ivEmail"
+                android:text="gurupreetsingh@gmail.com"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E1E1E1"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/ivEmail" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rlEmail"
+            android:id="@+id/rlPhone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivPhone"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="14dp"
+                app:srcCompat="@drawable/phone2"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp" />
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/ivPhone"
+                android:layout_toRightOf="@+id/ivPhone"
+                android:text="8967564567"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E1E1E1"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/ivPhone" />
+        </RelativeLayout>
+
+       <RelativeLayout
+           android:layout_below="@+id/rlPhone"
+           android:id="@+id/rlTrade"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <ImageView
+               android:id="@+id/ivTrade"
+               android:layout_width="24dp"
+               android:layout_height="24dp"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginTop="14dp"
+               app:srcCompat="@drawable/trade"
+               android:layout_marginLeft="12dp"
+               android:layout_marginStart="12dp" />
+
+           <TextView
+               android:id="@+id/tvTrade"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentTop="true"
+               android:layout_marginLeft="12dp"
+               android:layout_marginStart="12dp"
+               android:layout_marginTop="15dp"
+               android:layout_toEndOf="@+id/ivTrade"
+               android:layout_toRightOf="@+id/ivTrade"
+               android:text="Driver"
+               android:textStyle="normal"
+               android:textAlignment="center"
+               android:textSize="16sp" />
+
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="0.5dp"
+               android:background="#E1E1E1"
+               android:layout_marginTop="14dp"
+               android:layout_below="@+id/ivTrade" />
+       </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rlTrade"
+            android:id="@+id/rlAdd"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="14dp"
+                app:srcCompat="@drawable/map_hover"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp" />
+            <TextView
+                android:id="@+id/tvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/ivAdd"
+                android:layout_toRightOf="@+id/ivAdd"
+                android:text="HNO. 231, Sector 47"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvLCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/tvAdd"
+                android:layout_toEndOf="@+id/ivAdd"
+                android:layout_toRightOf="@+id/ivAdd"
+                android:text="City:- "
+                android:visibility="gone"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tvAdd"
+                android:layout_toEndOf="@+id/tvLCity"
+                android:layout_toRightOf="@+id/tvLCity"
+                android:text="Chandigarh"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvLState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/tvLCity"
+                android:layout_toEndOf="@+id/ivAdd"
+                android:layout_toRightOf="@+id/ivAdd"
+                android:textColor="@android:color/black"
+                android:text="State:- "
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tvCity"
+                android:layout_toEndOf="@+id/tvLCity"
+                android:layout_toRightOf="@+id/tvLCity"
+                android:text="Punjab"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E1E1E1"
+                android:layout_below="@+id/tvState"
+                android:layout_marginTop="14dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/rlAdd"
+            android:id="@+id/rlBank"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBank"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="14dp"
+                app:srcCompat="@drawable/bank_account"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp" />
+            <TextView
+                android:id="@+id/tvLBankAc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Bank A/c No "
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="16sp"
+               android:layout_marginTop="18dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/ivBank"
+                android:layout_toRightOf="@+id/ivBank" />
+            <TextView
+                android:id="@+id/tvAcNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@+id/tvLBankAc"
+                android:layout_toRightOf="@+id/tvLBankAc"
+                android:text="11238675678"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvLIFCCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/tvLBankAc"
+                android:layout_toEndOf="@+id/ivBank"
+                android:layout_toRightOf="@+id/ivBank"
+                android:textColor="@android:color/black"
+                android:text="IFSC Code "
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvIFCCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tvAcNo"
+                android:layout_toEndOf="@+id/tvLIFCCode"
+                android:layout_toRightOf="@+id/tvLIFCCode"
+                android:text="SBI897867856"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvLBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/tvLIFCCode"
+                android:layout_toEndOf="@+id/ivBank"
+                android:layout_toRightOf="@+id/ivBank"
+                android:textColor="@android:color/black"
+                android:text="Branch "
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tvIFCCode"
+                android:layout_toEndOf="@+id/tvLBranch"
+                android:layout_toRightOf="@+id/tvLBranch"
+                android:text="SBI Sector 40, Chandigarh"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E1E1E1"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/tvLBranch"
+                />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/ivGallery"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rlBank"
+            android:layout_marginTop="14dp"
+            app:srcCompat="@drawable/gallery"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" />
+       <TextView
+           android:id="@+id/tvLDocument"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="12dp"
+           android:layout_marginStart="12dp"
+           android:layout_marginTop="18dp"
+           android:layout_toRightOf="@+id/ivGallery"
+           android:layout_toEndOf="@+id/ivGallery"
+           android:layout_below="@+id/rlBank"
+           android:textColor="@android:color/black"
+           android:text="Id Proof Photos"
+           android:textStyle="bold"
+           android:textAlignment="center"
+           android:textSize="16sp" />
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/rv"
+           android:layout_marginLeft="12dp"
+           android:layout_marginStart="12dp"
+           android:layout_marginRight="12dp"
+           android:layout_marginEnd="12dp"
+           android:layout_marginTop="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:layoutManager="LinearLayoutManager"
+           android:layout_toRightOf="@+id/ivGallery"
+           android:layout_toEndOf="@+id/ivGallery"
+           android:layout_below="@+id/tvLDocument" />
+
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
+</FrameLayout>
+</layout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rlAAQ"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivForwardAAQ"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            app:srcCompat="@drawable/setting_right_arrow"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp" />
+        <TextView
+            android:id="@+id/tvAAQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp"
+            android:text="Ask a Question"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+
+        <View
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E1E1E1"
+            android:layout_below="@+id/tvAAQ" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlThreadAlarm"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivForwardTA"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            app:srcCompat="@drawable/setting_right_arrow"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp" />
+        <TextView
+            android:id="@+id/tvTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp"
+            android:text="Threat Alert"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tvTA" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlLogOut"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp"
+            android:text="Logout"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/tvLogout" />
+    </RelativeLayout>
+</LinearLayout>
+</layout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	>
+	<data>
+
+		<variable name="data" type="com.think360.sotaknights.model.ImageUrl"/>
+		<variable name="callback" type="com.think360.sotaknights.interfaces.ActionCallback"/>
+	</data>
+<FrameLayout
+	android:orientation="horizontal"
+	android:id="@+id/relativeLayout1"
+	android:layout_width="120dp"
+	android:layout_height="120dp"
+	android:padding="5dp">
+
+    <ImageView
+		android:layout_height="120dp"
+    	android:id="@+id/imageView1"
+		android:onClick="@{() -> callback.onClick(data.image)}"
+		android:layout_width="120dp"
+		/>
+
+
+</FrameLayout>
+	</layout>

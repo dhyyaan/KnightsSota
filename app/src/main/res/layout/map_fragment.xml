@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+   <com.rafakob.drawme.DrawMeLinearLayout
+       app:dm_radius="4dp"
+       app:dm_backColor="#101010"
+       android:layout_width="wrap_content"
+       android:layout_height="52dp"
+       android:id="@+id/llMapSwitch"
+
+       android:layout_alignParentBottom="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginBottom="30dp">
+       <com.nightonke.jellytogglebutton.JellyToggleButton
+           android:id="@+id/jellyToggleButton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:jtbJelly="itself"
+           app:jtbLeftBackgroundColor="#878787"
+           app:jtbRightBackgroundColor="#1D5B10"
+           android:layout_gravity="center"
+           android:layout_marginStart="16dp"
+           android:layout_marginLeft="16dp"
+           app:jtbLeftThumbColor="@android:color/white"
+           app:jtbRightThumbColor="#2AAA11"/>
+       <TextView
+           android:id="@+id/tvMapSwitch"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignBottom="@+id/llMapSwitch"
+           android:layout_marginLeft="8dp"
+           android:layout_marginStart="8dp"
+           android:layout_marginRight="16dp"
+           android:layout_marginEnd="16dp"
+           android:textSize="18sp"
+           android:layout_gravity="center"
+           android:layout_toEndOf="@+id/llMapSwitch"
+           android:layout_toRightOf="@+id/llMapSwitch"
+           android:textColor="@android:color/white"
+           android:text="Available" />
+   </com.rafakob.drawme.DrawMeLinearLayout>
+
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/map"
+        android:title="@string/txt_map"
+        />
+    <item
+        android:id="@+id/navigation_cmp"
+        android:icon="@drawable/company"
+        android:title="@string/txt_cmp"
+       />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile"
+        android:title="@string/txt_profile"
+      />
+
+    <item
+        android:id="@+id/navigation_task"
+        android:icon="@drawable/task"
+        android:title="@string/txt_task"
+       />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/setting"
+        android:title="@string/txt_settings"
+       />
+
+
+
+</menu>

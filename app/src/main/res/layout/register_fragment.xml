@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:fillViewport="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@android:color/white"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<ScrollView
+    android:id="@+id/sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rlTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@android:color/white">
+    <FrameLayout
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true">
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/back_arrow" />
+     </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tvMainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:textColor="@color/colorAccent"
+            />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/ivLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/login_logo"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+    android:layout_below="@+id/rlTitleBar" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_use_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLogin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="22dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="textPersonName|textCapSentences"
+            android:hint="Name"
+            android:ems="10"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_use_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:ems="10"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="number"
+            android:hint="Mobile #"
+            android:ems="10"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_mobile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="textPostalAddress"
+            android:hint="Permanent Address"
+            android:ems="10"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+        <Spinner
+            android:layout_below="@+id/input_layout_add"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/sp_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/line1"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_below="@+id/sp_state"
+        android:background="#929292"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"/>
+    <Spinner
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/sp_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/line2"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_below="@+id/sp_city"
+        android:background="#929292"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"/>
+
+
+        <EditText
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:layout_below="@+id/line2"
+            android:id="@+id/et_other_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:textSize="14sp" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_pre_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_other_city"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_pre_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="textPostalAddress"
+            android:hint="Present Address"
+            android:ems="10"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <Spinner
+        android:layout_below="@+id/input_layout_pre_add"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/sp_pre_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/line3"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_below="@+id/sp_pre_state"
+        android:background="#929292"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"/>
+    <Spinner
+        android:layout_below="@+id/line3"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/sp_pre_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/line4"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_below="@+id/sp_pre_city"
+        android:background="#929292"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"/>
+
+        <EditText
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:layout_below="@+id/line4"
+            android:id="@+id/et_other_pre_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="text"
+            android:ems="10"
+            android:textSize="14sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_bank_acc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_other_pre_city"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_bank_acc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="number"
+            android:hint="Bank A/c no."
+            android:ems="10"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_ifsc_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_bank_acc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"  >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_ifsc_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="text"
+            android:hint="IFSC Code"
+            android:ems="10"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_branch_name_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_ifsc_code"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_branch_name_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:inputType="textPostalAddress"
+            android:hint="Branch Name/Address"
+            android:ems="10"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!--  Dl -->
+    <com.rafakob.drawme.DrawMeRelativeLayout
+        android:id="@+id/rlUploadDl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:dm_radius="2dp"
+        android:layout_below="@+id/input_layout_branch_name_add"
+        app:dm_backColor="#EBEBEB">
+        <TextView
+            android:id="@+id/tvUploadDl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#6A6A6A"
+            android:layout_below="@+id/ivPsara"
+            android:text="Upload Passport Size Photograph"
+            android:typeface="normal" />
+        <com.rafakob.drawme.DrawMeButton
+            android:id="@+id/btnUploadDl"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:fontFamily="sans-serif"
+            android:text="    Upload From Gallery"
+            android:drawableLeft="@drawable/upload_camera"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:layout_below="@+id/tvUploadDl"
+            app:dm_backColor="#293787"
+            app:dm_backColorPressed="@android:color/holo_red_dark"
+            app:dm_backColorDisabled="@android:color/white"
+            app:dm_shapeRadiusHalfHeight="true"/>
+        <FrameLayout
+            android:layout_below="@+id/btnUploadDl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal|center_vertical" />
+            <ImageView
+                android:id="@+id/ivDl"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/preview" />
+        </FrameLayout>
+    </com.rafakob.drawme.DrawMeRelativeLayout>
+    <!--  Dl -->
+    <!-- Aadhar Card -->
+    <com.rafakob.drawme.DrawMeRelativeLayout
+        android:id="@+id/rlAdharCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_below="@+id/rlUploadDl"
+        app:dm_radius="2dp"
+        app:dm_backColor="#EBEBEB">
+    <TextView
+        android:id="@+id/tvUploadAdharCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6A6A6A"
+        android:layout_marginTop="12dp"
+        android:text="Adhaar Card/ ID Proof Photo"
+        android:typeface="normal" />
+    <com.rafakob.drawme.DrawMeButton
+        android:id="@+id/btnUploadAdharCard"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:fontFamily="sans-serif"
+        android:text="    Upload From Gallery"
+        android:drawableLeft="@drawable/upload_camera"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:layout_below="@+id/tvUploadAdharCard"
+        app:dm_backColor="#293787"
+        app:dm_backColorPressed="@android:color/holo_red_dark"
+        app:dm_backColorDisabled="@android:color/white"
+        app:dm_shapeRadiusHalfHeight="true"/>
+        <FrameLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnUploadAdharCard">
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal|center_vertical" />
+            <ImageView
+                android:id="@+id/ivAadharImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/preview" />
+        </FrameLayout>
+
+</com.rafakob.drawme.DrawMeRelativeLayout>
+
+
+    <!--  Gl -->
+    <com.rafakob.drawme.DrawMeRelativeLayout
+        android:id="@+id/rlUploadGl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:dm_radius="2dp"
+        android:layout_below="@+id/rlAdharCard"
+        app:dm_backColor="#EBEBEB">
+    <TextView
+        android:id="@+id/tvUploadGl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="#6A6A6A"
+        android:layout_below="@+id/ivDl"
+        android:text="Resume/Skill Certificate Photo"
+        android:typeface="normal" />
+    <com.rafakob.drawme.DrawMeButton
+        android:id="@+id/btnUploadGl"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:fontFamily="sans-serif"
+        android:text="    Upload From Gallery"
+        android:drawableLeft="@drawable/upload_camera"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:layout_below="@+id/tvUploadGl"
+        app:dm_backColor="#293787"
+        app:dm_backColorPressed="@android:color/holo_red_dark"
+        app:dm_backColorDisabled="@android:color/white"
+        app:dm_shapeRadiusHalfHeight="true"/>
+        <FrameLayout
+            android:layout_below="@+id/btnUploadGl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+            <ProgressBar
+                android:id="@+id/progressBar4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal|center_vertical" />
+    <ImageView
+        android:id="@+id/ivGl"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/preview" />
+        </FrameLayout>
+    </com.rafakob.drawme.DrawMeRelativeLayout>
+    <!--  Gl -->
+    <!--  Psara -->
+    <com.rafakob.drawme.DrawMeRelativeLayout
+        android:id="@+id/rlUploadPsara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:dm_radius="2dp"
+        android:layout_below="@+id/rlUploadGl"
+        app:dm_backColor="#EBEBEB">
+        <TextView
+            android:id="@+id/tvUploadPsara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#6A6A6A"
+            android:layout_below="@+id/ivAadharImage"
+            android:text="Misc./PASARA"
+            android:typeface="normal" />
+        <com.rafakob.drawme.DrawMeButton
+            android:id="@+id/btnUploadPsasa"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:fontFamily="sans-serif"
+            android:text="    Upload From Gallery"
+            android:drawableLeft="@drawable/upload_camera"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:layout_below="@+id/tvUploadPsara"
+            app:dm_backColor="#293787"
+            app:dm_backColorPressed="@android:color/holo_red_dark"
+            app:dm_backColorDisabled="@android:color/white"
+            app:dm_shapeRadiusHalfHeight="true"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_below="@+id/btnUploadPsasa">
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal|center_vertical" />
+            <ImageView
+                android:id="@+id/ivPsara"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/preview" />
+        </FrameLayout>
+    </com.rafakob.drawme.DrawMeRelativeLayout>
+    <!--  Psara -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlUploadPsara"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/llTermsCon">
+        <CheckBox
+            android:id="@+id/chTc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvTc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:typeface="normal" />
+
+
+    </LinearLayout>
+
+
+    <com.rafakob.drawme.DrawMeButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif"
+        android:layout_below="@+id/llTermsCon"
+        android:clickable="false"
+        android:text="Register"
+        android:textAllCaps="true"
+        android:textColor="#FEEE35"
+        android:textSize="14sp"
+        app:dm_backColor="#293787"
+        app:dm_backColorPressed="@android:color/holo_red_dark"
+        app:dm_backColorDisabled="@android:color/white"
+        app:dm_shapeRadiusHalfHeight="true"/>
+
+
+</RelativeLayout>
+    </ScrollView>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="330dp"
+            android:layout_gravity="center|bottom" />
+    </FrameLayout>
+    </layout>
